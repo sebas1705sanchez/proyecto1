@@ -32,19 +32,13 @@ function App() {
   ];
 
   const [indiceActual, setIndiceActual] = useState(0);
-  // Añade un estado para forzar la re-renderización
-  const [keyTestimonio, setKeyTestimonio] = useState(0);
 
   const siguienteTestimonio = () => {
     setIndiceActual((prevIndice) => (prevIndice + 1) % testimonios.length);
-    // Actualiza la clave para forzar la re-renderización
-    setKeyTestimonio(prevKey => prevKey + 1);
   };
 
   const anteriorTestimonio = () => {
     setIndiceActual((prevIndice) => (prevIndice - 1 + testimonios.length) % testimonios.length);
-    // Actualiza la clave para forzar la re-renderización
-    setKeyTestimonio(prevKey => prevKey + 1);
   };
 
   // Paso 4: Renderizar el testimonio actual
@@ -54,8 +48,7 @@ function App() {
     <div className="App">
       <div className='contenedor-principal'>
         <h1>PROTECTORES GALÁCTICOS</h1>
-        <Testimonio 
-          keyTestimonio={keyTestimonio}
+        <Testimonio
           nombre={testimonioActual.nombre}
           pais={testimonioActual.pais}
           imagen={testimonioActual.imagen}

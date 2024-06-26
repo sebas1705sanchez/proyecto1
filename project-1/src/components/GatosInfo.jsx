@@ -2,10 +2,8 @@ import React, { useState } from "react";
 import '../css/GatosInfo.css';
 
 function GatosInfo(props) {
-    const [animacion, setAnimacion] = useState('entrada');
-
     return (
-        <div key={props.keyTestimonio} className="contenedor-testimonio entrada">
+        <div className="contenedor-testimonio entrada">
             <img className='imagen-testimonio'
                 src={require(`../images/img-${props.imagen}.png`)}
                 alt='cat picture'

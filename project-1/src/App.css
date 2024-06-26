@@ -44,12 +44,18 @@ h1 {
 }
 
 .buttons-prev-next button {
-    background-color: #007bff;
-    color: white;
+    background-color: white;
+    color: black;
+    font-size: 30px;
     border: none;
     padding: 10px 20px;
     margin: 0 10px;
     cursor: pointer;
     border-radius: 25px;
+}
+
+.buttons-prev-next button:hover {
+    background-color: #95D2B3;
+    color: white;
 }
 
