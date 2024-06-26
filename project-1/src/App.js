@@ -33,6 +33,7 @@ function App() {
 
   const [indiceActual, setIndiceActual] = useState(0);
 
+  // Paso 2: Crear funciones para navegar entre testimonios
   const siguienteTestimonio = () => {
     setIndiceActual((prevIndice) => (prevIndice + 1) % testimonios.length);
   };
@@ -41,13 +42,14 @@ function App() {
     setIndiceActual((prevIndice) => (prevIndice - 1 + testimonios.length) % testimonios.length);
   };
 
-  // Paso 4: Renderizar el testimonio actual
+  // Paso 3: Renderizar el testimonio actual
   const testimonioActual = testimonios[indiceActual];
 
+  // Paso 4 y 5: Renderizar UI y botones para cambiar de testimonio
   return (
     <div className="App">
       <div className='contenedor-principal'>
-        <h1>PROTECTORES GALÁCTICOS</h1>
+        <h1>Titulo del Carrusel</h1>
         <Testimonio
           nombre={testimonioActual.nombre}
           pais={testimonioActual.pais}

@@ -3,7 +3,7 @@ import '../css/GatosInfo.css';
 
 function GatosInfo(props) {
     return (
-        <div className="contenedor-testimonio entrada">
+        <div className="contenedor-testimonio">
             <img className='imagen-testimonio'
                 src={require(`../images/img-${props.imagen}.png`)}
                 alt='cat picture'
